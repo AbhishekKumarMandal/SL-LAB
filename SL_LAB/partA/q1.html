@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>divisibility test</title>
+</head>
+<body>
+<form>
+	enter your no: <input type="text" id="num"><br>
+	<label id="res"></label><br>
+	<input type="radio" id="div3" name="radio" onclick="fun1()"> divisible by 3
+	<input type="radio" id="div7" name="radio" onclick="fun2()"> divisible by 7
+</form>
+<script> //<script src="q1.js"> //when javascript code is in another file give the location of that file.// 
+	
+	window.onload=function(){
+	
+	document.getElementById('num').value="";
+	document.getElementById('res').innerHTML="";
+	document.getElementById('div3').checked = false;
+	document.getElementById('div7').checked = false;
+	};
+	
+	function fun1()
+	{
+		var num;
+		num = document.getElementById("num").value;
+		if(isNaN(num))
+			document.getElementById('res').innerHTML="<br>"+"not a number"+"<br>";
+		else if(num%3==0)
+			document.getElementById('res').innerHTML="<br>"+"divisible by 3"+"<br>";
+		else
+			document.getElementById('res').innerHTML="<br>"+"not divisible by 3"+"<br>";
+	}
+	
+	
+	function fun2()
+	{
+		var num;
+		num = document.getElementById("num").value;
+		if(isNaN(num))
+			document.getElementById('res').innerHTML="<br>"+"not a number"+"<br>";
+		else if(num%7==0)
+			document.getElementById('res').innerHTML="<br>"+"divisible by 7"+"<br>";
+		else
+			document.getElementById('res').innerHTML="<br>"+"not divisible by 7"+"<br>";
+	}
+
+</script>
+</body>
+</html>

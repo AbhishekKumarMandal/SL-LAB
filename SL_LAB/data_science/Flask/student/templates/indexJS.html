@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>form</title>
+</head>
+<body>
+	<b>{{msg}}</b>
+<!-- 
+	<form method="POST" action="http://192.168.43.177:8000/"> -->
+
+	<form method="POST" action="{{ url_for('indexJS') }}">
+		USN<br><input type="text" name="usn"><br>
+		DOB<br><input type="date" name="dob"><br>
+		<input type="submit" value="submit">
+	</form>
+
+</body>
+</html>

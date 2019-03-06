@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>atm</title>
+
+		<script type="text/javascript">
+		function deposit()
+		{
+			window.location.replace("/dep");
+		}
+
+		function withdraw()
+		{
+			window.location.replace("/with");
+		}
+	</script>
+
+</head>
+<body>
+	<form action="{{ url_for('index') }}" method="POST">
+		your current balance is <b>{{balance}}</b> Rs/-<br><br>
+		{{msg}}<br><br>
+		enter ammount<br>
+		<input type="text" name="amt"><br><br>
+		<input type="button" name="deposit" value="deposit" onclick="deposit()">
+		<input type="button" name="withdraw" value="withdraw" onclick="withdraw()">
+		<!-- <a href="{{ url_for('deposit') }}">deposit</a>
+		<a href="{{ url_for('withdraw') }}">withdraw</a> -->
+	</form>
+</body>
+</html>

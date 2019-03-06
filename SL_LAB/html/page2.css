@@ -1,0 +1,103 @@
+body
+{
+	background-color: #f4f4f4;
+	color: rgb(150,0,230);
+	/* same here by using hexadecimal
+	 eg: color:#f4f4;
+	 and directly
+	 eg: color:blue;
+	 */
+	font-family:helvetica;
+	font-size: 13px;
+	font-weight:normal;
+	/*same as above
+	font=helvetica,13px,normal
+	*/
+	line-height: 1.5em;
+}
+.container
+{
+	width:90%;
+	margin:auto;
+}
+
+.box1
+{
+	background-color:#f4f4;
+	margin: 0;
+	color: rgb(100,0,255);
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+
+	/* to do all padding at same time
+	   padding:1px; // for all sides 1 px;
+	   padding:1px,2px,3px,4px; // for top,right,buttom,left
+	   padding:1px,2px;//for top and bottom to be 1px
+	   and right and left to be 2px
+	*/
+	
+	/*
+	border-right-width: 5px;
+	border-right-color: blue;
+	border-right-style: solid;
+	*/     
+	
+	/*for all borders at same time*/
+	border:5px green dotted;
+
+	padding: 10px;
+	margin-top: 20px;
+}
+h1
+{
+	font-style:italic;
+	font-family:Tahoma;
+	font-weight: 800;
+	text-decoration: underline;
+	text-transform:uppercase;
+	letter-spacing: 0.1em;
+	word-spacing: 0.05em;
+}
+
+.box2
+{
+	border:5px red dotted;
+	background-color:rgb(120,160,0);
+	padding: 10px;
+}
+
+.container1
+{
+	border:2px black solid;
+	border-radius: 15px;
+	/*padding-left:10px;*/
+	/*padding-bottom: 10px;*/
+	background-color: #f4f4;
+}
+
+.box4
+{
+	border-top: 1px blue solid;
+	padding:10px;
+	background-color:#f4f4f4
+	text-decoration-color:black; 
+}
+
+.form label
+{
+	display:block
+}
+.form input
+{
+	padding: 3px;
+	width:50%;
+}
+.form input[type="submit"]
+{
+	background-color: #333;
+	color:white;
+	width: 10%;
+	border:none;
+}

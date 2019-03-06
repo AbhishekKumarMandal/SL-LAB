@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>store</title>
+</head>
+<body>
+	<h1>Welcome To Store</h1>
+	<form action="{{ url_for('store') }}" method="POST">
+		<input name="egg" type="number" min=0> eggs 5 Rs/- each <br>
+		<input name="milk" type="number" min=0> milk 12 Rs/- packet <br>
+		<input name="bread" type="number" min=0> bread 22 Rs/- packet <br>
+		<input type="submit" value="add to cart">
+	</form>
+	<br>
+	<a href="{{ url_for('cart') }}">view your cart</a>
+</body>
+</html>

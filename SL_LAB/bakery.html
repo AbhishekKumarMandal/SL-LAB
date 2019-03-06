@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>bakery shop</title>
+</head>
+<body>
+	<h3><u><b>Bakery Shop</u></b></h3>
+	<form>
+		<h4>Cakes</h4>
+		<img src="cake.jpeg" height="200px" width="200px"><br><b>Rs 300/- per piece </b><br>
+		<label>Quantity</label><input type="number" id="cake" max="100" min="0">
+		
+		<br>
+		
+		<h4>Cookies</h4>
+		<img src="cookie.jpeg" height="200px" width="200px"><br><b>Rs 150/- per packet</b> <br>
+		<label>No of packets</label><input type="number" id="cookie" max="100" min="0">
+		
+		<br>
+		
+		<input type="button" onclick="calc()" value="submit">
+		<br>
+		<label id="result"></label>
+
+	</form>
+
+	<script type="text/javascript">
+		function calc()
+		{
+			var cake=parseInt(document.getElementById('cake').value);
+
+			var cookie=parseInt(document.getElementById('cookie').value);
+
+			var total=(300*cake)+(150*cookie);
+
+			document.getElementById('result').innerHTML=("total ammount: "+total+" Rs/-");
+		}
+	</script>
+
+</body>
+</html>

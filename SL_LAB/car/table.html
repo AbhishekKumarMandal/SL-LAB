@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<head>
+<style>
+ td:hover
+ {
+   color: red ;
+   background-color: orange ;
+ }
+ th
+ {
+   background-color: yellow;
+ }
+</style>
+
+<title>table</title>
+
+</head>
+<body background='lightgrey'>
+<br><br>
+<table border='3' width='30%' align= 'center'>
+
+<tr>
+<th align='center'>List</th>
+</tr>
+<tr>
+<td align='center' height="50" onmouseover='ford()' onmouseout='out()'>ford</td>
+</tr>
+
+<tr>
+<td align='center' height="50" onmouseover='bmw()' onmouseout='out()'>bmw</td>
+</tr>
+
+<tr>
+<td align='center' height="50" onmouseover='mercedes()' onmouseout='out()'>mercedes</td>
+</tr>
+
+<tr>
+<td align='center' height="50" onmouseover='maruti()' onmouseout='out()'>maruti</td>
+</tr>
+
+</table>
+
+<script>
+cars=[{nam:"Ford",img:"mustang1"},{nam:"BMW",img:"bmw2"},{nam:"Mercedes",img:"mercedes2"},{nam:"maruti",img:"maruti2"}];
+function out()
+{
+ document.getElementById("all").style.display="none";
+}
+
+function ford()
+{
+  document.getElementById("all").style.display="block";
+  var f={
+   model : ["Ecosport ","Fiesta  ","Mustang"],
+   color : ["Red ","White ","Blue ","Brown ","Yellow"]
+   };
+   var z=cars[0].img;
+   document.getElementById("name").innerHTML=cars[0].nam;
+   document.getElementById("image").src=(z+".jpeg");
+   document.getElementById('show').innerHTML=("Available Models:  "+f.model+"<br>"+"Available Colors:  "+f.color); 
+}
+
+function bmw()
+{
+  document.getElementById("all").style.display="block";
+  var b={
+   model : ["X3 ","X5 ","X6 ","3 Series Sedan ","5 Series"],
+   color : ["Red ","White ","Blue ","Orange "]
+   };
+   
+   var z=cars[1].img;
+   document.getElementById("name").innerHTML=cars[1].nam;
+   document.getElementById("image").src=(z+".jpeg");
+   //document.getElementById("image").src="bmw2.jpeg";
+   document.getElementById('show').innerHTML=("Available Models:  "+b.model+"<br>"+"Available Colors:  "+b.color); 
+}
+
+function mercedes()
+{
+  document.getElementById("all").style.display="block";
+  var m={
+   model : ["Benz A-Class ","Benz CLA ","Benz GLA ","Benz E-Class"],
+   color : ["Red ","White ","Blue ","Black "]
+   };
+   
+   var z=cars[2].img;
+   document.getElementById("name").innerHTML=cars[2].nam;
+   document.getElementById("image").src=(z+".jpeg");
+   //document.getElementById("image").src="mercedes2.jpeg";
+   document.getElementById('show').innerHTML=("Available Models:  "+m.model+"<br>"+"Available Colors:  "+m.color); 
+}
+
+function maruti()
+{
+  document.getElementById("all").style.display="block";
+  var ma={
+   model : ["800 ","Swift  ","Swift Desire ","Baleno ","S-Cross"],
+   color : ["Red ","White ","Blue ","Black"]
+   };
+   
+   var z=cars[3].img;
+   document.getElementById("name").innerHTML=cars[3].nam;
+   document.getElementById("image").src=(z+".jpeg");
+   //document.getElementById("image").src="maruti2.jpeg";
+   document.getElementById('show').innerHTML=("Available Models:  "+ma.model+"<br>"+"Available Colors:  "+ma.color); 
+}
+
+</script>
+<div id="all" align='center'>
+<br><br>
+<label id='name'></label>
+<br><br>
+<img id='image'>
+<br>
+<label id='show'></label>
+</div>
+
+</body>
+</html>

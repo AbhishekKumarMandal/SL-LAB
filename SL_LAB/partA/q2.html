@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AUTHOR</title>
+</head>
+<body>
+	<table border=1>
+	<tr>
+		<th>name</th>
+		<th>story title</th>
+	</tr>
+	<tr>
+		<td id="n1"></td>
+		<td id="t1"></td>
+	</tr>
+	
+	<tr>
+		<td id="n2"></td>
+		<td id="t2"></td>
+	</tr>
+	
+	</table><br><br>
+	<b>name:</b> <label id='n3'></label>  <b>story title:</b> <label id='t3'></label><br>
+	<b>name:</b> <label id='n4'></label>  <b>story title:</b> <label id='t4'></label>
+</body>
+<script>
+	book=[{name:"JK Rowling", title:"harry potter"},
+	      {name:"RK Narayan", title:"malgudi days"},
+	      {name:"Chetan Bhagat", title:"Indian Girl"},
+	      {name:"HC Verma", title:"Concepts of Physics"}];    //creating JSON object...
+	      
+	document.getElementById('n1').innerHTML=book[0].name;
+	document.getElementById('t1').innerHTML=book[0].title;
+	document.getElementById('n2').innerHTML=book[1].name;
+	document.getElementById('t2').innerHTML=book[1].title;
+	document.getElementById('n3').innerHTML=book[2].name;
+	document.getElementById('t3').innerHTML=book[2].title;
+	document.getElementById('n4').innerHTML=book[3].name;
+	document.getElementById('t4').innerHTML=book[3].title;
+</script>
+</html>

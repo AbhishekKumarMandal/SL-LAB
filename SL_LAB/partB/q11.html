@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hospital</title>
+<style>
+	tr:hover
+	{
+		color:red;
+		background-color:yellow;
+	}
+</style>
+</head>
+<body>
+<center>
+<table border=1>
+	<tr>
+		<th>NAME</th>
+		<th>LOCATION</th>
+	</tr>
+	
+	<tr onmouseover="fun1()" onmouseout="fun()">
+		<td id="n1"></td>
+		<td id="l1"></td>
+	</tr>
+	
+	<tr onmouseover="fun2()" onmouseout="fun()">
+		<td id="n2"></td>
+		<td id="l2"></td>
+	</tr>
+	
+	<tr onmouseover="fun3()" onmouseout="fun()">
+		<td id="n3"></td>
+		<td id="l3"></td>
+	</tr>
+</table>
+<br><br>
+<label id="show">
+<label id="name"></label><br>
+<label id="adh"></label><br>
+<label id="test"></label>	
+</label>
+</center>
+<script>
+var detail=[ {nam:"abhi"   , adhar:1234  , test:["blood","sugar","thyroid"]},
+	     {nam:"raunak" , adhar:5678  , test:["sugar","thyroid"]},
+             {nam:"roshan" , adhar:91011 , test:["blood","thyroid"]} ];
+
+var hospital=[ {nam:"AIIMS",location:"delhi"},
+	       {nam:"RIMS",location:"Ranchi"},
+	       {nam:"MSRIT",location:"bagalore"} ];
+
+document.getElementById("n1").innerHTML=hospital[0].nam;
+document.getElementById("l1").innerHTML=hospital[0].location;
+document.getElementById("n2").innerHTML=hospital[1].nam;
+document.getElementById("l2").innerHTML=hospital[1].location;
+document.getElementById("n3").innerHTML=hospital[2].nam;
+document.getElementById("l3").innerHTML=hospital[2].location;
+
+
+
+function fun()
+{
+	document.getElementById("show").style.display="none";
+}
+function fun1()
+{
+	document.getElementById("show").style.display="block";
+	document.getElementById("name").innerHTML=("name: "+detail[0].nam);
+	document.getElementById("adh").innerHTML=("Adhar: "+detail[0].adhar);
+	document.getElementById("test").innerHTML=("tests: "+detail[0].test);
+}
+
+function fun2()
+{
+	document.getElementById("show").style.display="block";
+	document.getElementById("name").innerHTML=("name: "+detail[1].nam);
+	document.getElementById("adh").innerHTML=("Adhar: "+detail[1].adhar);
+	document.getElementById("test").innerHTML=("tests: "+detail[1].test);
+}
+
+function fun3()
+{
+	document.getElementById("show").style.display="block";
+	document.getElementById("name").innerHTML=("name: "+detail[2].nam);
+	document.getElementById("adh").innerHTML=("Adhar: "+detail[2].adhar);
+	document.getElementById("test").innerHTML=("tests: "+detail[2].test);
+}
+</script>
+</body>
+</html>

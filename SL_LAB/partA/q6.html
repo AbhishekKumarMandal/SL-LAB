@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>calculator</title>
+</head>
+<body>
+         
+                <form>
+                        first number <input type="text" id="first"><br>
+                        last number <input type="text" id="second"><br>
+                        <input type="radio" name="radio" id="r1" onclick="add()">add
+                        <input type="radio" name="radio" id="r2" onclick="multiply()">multiply
+                        <input type="radio" name="radio" id="r3" onclick="divide()">divide<br>
+                        <label id="result"></label>
+                </form>
+     
+                
+        <script>
+        	window.onload=function(){
+        		document.getElementById("first").value="";
+        		document.getElementById("second").value="";
+        		document.getElementById("r1").checked=false;
+        		document.getElementById("r2").checked=false;
+        		document.getElementById("r3").checked=false;
+        	};
+                function add()
+                {
+                        var num1=document.getElementById("first").value;
+                        var num2=document.getElementById("second").value;
+                        if(isNaN(num1)||isNaN(num2)||num1==""||num2=="")
+                        	document.getElementById('result').innerHTML="please enter number";
+                        else
+                        {
+                        var num3=parseInt(num1)+parseInt(num2);
+                        document.getElementById("result").innerHTML="result is: "+num3;
+                        }
+                }
+
+                function multiply()
+                {
+                        var num1=document.getElementById('first').value;
+                        var num2=document.getElementById('second').value;
+                        if(isNaN(num1)||isNaN(num2)||num1==""||num2=="")
+                      		document.getElementById('result').innerHTML="please enter number";
+                      	else
+                      	{
+                        var num3=parseInt(num1)*parseInt(num2);
+                        document.getElementById('result').innerHTML="result is: "+num3;
+                        }
+                }
+
+                function divide()
+                {
+                        var num1=document.getElementById('first').value;
+                        var num2=document.getElementById('second').value;
+                        if(isNaN(num1)||isNaN(num2)||num1==""||num2=="")
+                        	document.getElementById('result').innerHTML="please enter number";
+                        else
+                        {
+                        num1=parseInt(num1);
+                        num2=parseInt(num2);
+                        if(num2!=0)
+                        {
+                                var num3=num1/num2;
+                                document.getElementById('result').innerHTML="result is: "+num3;
+                        }
+                        else
+                        {
+                                alert("divide by zero error");
+
+                        }
+                        }
+                }
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>grade calculator</title>
+</head>
+<body>
+	<!--<form>
+		<label>subject1:</label><input type="number" id="m1" required max="100" min="0"> <label id="1"></label><br><br>
+		<label>subject2:</label><input type="number" id="m2" required max="100" min="0"> <label id="2"></label><br><br>
+		<label>subject3:</label><input type="number" id="m3" required max="100" min="0"> <label id="3"></label><br><br>
+		<label>subject4:</label><input type="number" id="m4" required max="100" min="0"> <label id="4"></label><br><br>
+		<label>subject5:</label><input type="number" id="m5" required max="100" min="0"> <label id="5"></label><br><br>
+		<label>subject6:</label><input type="number" id="m6" required max="100" min="0"> <label id="6"></label><br><br>
+		<input type="button" onclick="calg()" value="submit"></input><br><br>
+		<label id="result"></label>
+	</form>-->
+		<table>
+		<thead>
+			<th><u>Subject</u></th>
+			<th><u>Marks</u></th>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input type="text" id="s1"></td>
+				<td><input type="number" id="m1" required max="100" min="0" value=0>  <label id="1"></label></td>
+			</tr>
+
+			<tr>
+				<td><input type="text" id="s2"></td>
+				<td><input type="number" id="m2" required max="100" min="0" value=0>  <label id="2"></label></td>
+			</tr>
+
+			<tr>
+				<td><input type="text" id="s3"></td>
+				<td><input type="number" id="m3" required max="100" min="0" value=0>  <label id="3"></label></td>
+			</tr>
+
+			<tr>
+				<td><input type="text" id="s4"></td>
+				<td><input type="number" id="m4" required max="100" min="0" value=0>  <label id="4"></label></td>
+			</tr>
+
+			<tr>
+				<td><input type="text" id="s5"></td>
+				<td><input type="number" id="m5" required max="100" min="0" value=0>  <label id="5"></label></td>
+			</tr>
+
+			<tr>
+				<td><input type="text" id="s6"></td>
+				<td><input type="number" id="m6" required max="100" min="0" value=0>  <label id="6"></label></td>
+			</tr>
+		</tbody>
+
+	</table>
+	<input type="button" onclick="calg()" value="submit"><br><br>
+		<label id="result"></label>
+	<script type="text/javascript">
+		function calg()
+		{
+		
+			var l1=[];
+			var l2=[];
+			var l3=[];
+			var m1=parseInt(document.getElementById('m1').value);
+			var m2=parseInt(document.getElementById('m2').value);
+			var m3=parseInt(document.getElementById('m3').value);
+			var m4=parseInt(document.getElementById('m4').value);
+			var m5=parseInt(document.getElementById('m5').value);
+			var m6=parseInt(document.getElementById('m6').value);
+			var a=[m1,m2,m3,m4,m5,m6];
+			//var m=(m1+m2+m3+m4+m5+m6)/6;
+			for(var i=0;i<a.length;i++)
+			{
+				
+				//l1[i]=document.getElementById("s"+(i+1));
+				var m=a[i];
+
+				if(m>=91 && m<=100)
+				{
+					document.getElementById(i+1).innerHTML=" S+";
+					//l2[i]=document.getElementById("m"+(i+1));
+					//l3[i]="S+";
+					//document.getElementById(i+1).contentEditable=false;
+				}
+				else if(m>=81 && m<=90)
+				{
+					document.getElementById(i+1).innerHTML=" S";
+					//l2[i]=document.getElementById("m"+(i+1));
+					//l3[i]="S";
+					//document.getElementById(i+1).contentEditable=false;
+				}
+				else if(m>=71 && m<=80)
+				{
+					document.getElementById(i+1).innerHTML=" A";
+					//l2[i]=document.getElementById("m"+(i+1));
+					//l3[i]="A";
+					//document.getElementById(i+1).contentEditable=false;
+				}
+				else if(m>=61 && m<=70)
+				{
+					document.getElementById(i+1).innerHTML=" B";
+					//l2[i]=document.getElementById("m"+(i+1));
+					//l3[i]="B";
+					//document.getElementById(i+1).contentEditable=false;
+				}
+				else if(m>=51 && m<=60)
+				{
+					document.getElementById(i+1).innerHTML=" C";
+					//l2[i]=document.getElementById("m"+(i+1));
+					//l3[i]="C";
+					//document.getElementById(i+1).contentEditable=false;
+				}
+				else if(m>=40 && m<=50)
+				{
+					document.getElementById(i+1).innerHTML=" D";
+					//l2[i]=document.getElementById("m"+(i+1));
+					//l3[i]="D";
+					//document.getElementById(i+1).contentEditable=false;
+				}
+				else if(m<40)
+				{
+					document.getElementById(i+1).innerHTML=" FAIL";
+					//l2[i]=document.getElementById("m"+(i+1));
+					//l3[i]="FAIL";
+					//document.getElementById(i+1).contentEditable=false;
+				}
+				else
+					alert("wrong entry in subject"+(i+1)+" try again");
+			}
+
+			// document.write("Report Card\n");
+			// for(i=0;i<a.length;i++)
+			// {
+			// 	document.write(l1[i]+" "+l2[i]+" "+l3[i]+"\n");
+			// }
+		}
+	</script>
+
+</body>
+</html>

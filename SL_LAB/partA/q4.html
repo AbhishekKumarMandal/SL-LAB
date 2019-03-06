@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>question4</title>
+</head>
+<body>
+	<form>
+		enter number: <input type="text" id="num"><br><br>
+		<label id="res"></label>
+		<input type="button" onclick="double()" value="double">
+		<input type="button" onclick="square()" value="square">
+	</form>
+	<script>
+		window.onload=function(){document.getElementById('num').value="";};
+		function double()
+		{
+			var num=document.getElementById('num').value;
+			if(isNaN(num)|| num=="")
+				document.getElementById('res').innerHTML="please enter number"+"<br>";
+			else
+			{
+				num=parseInt(num)*2;
+				document.getElementById('res').innerHTML="double is:"+num+"<br>";
+			}
+		}
+		
+		function square()
+		{
+			var num=document.getElementById('num').value;
+			if(isNaN(num)|| num=="")
+				document.getElementById('res').innerHTML="please enter number"+"<br>";
+			else
+			{
+				num=parseInt(num)*parseInt(num);
+				document.getElementById('res').innerHTML="square is:"+num+"<br>";
+			}
+		}		
+			
+	</script>
+</body>
+</html>

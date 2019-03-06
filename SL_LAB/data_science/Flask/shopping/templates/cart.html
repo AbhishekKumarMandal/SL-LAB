@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>cart</title>
+	</head>
+	<body>
+		<h1>items in cart</h1><br>
+		{% for item in cart%}
+		{{item['name']}}:{{item['quantity']}}<br>
+		{% endfor %}
+		<br>
+		<a href="{{ url_for('store') }}">continue shopping</a><br>
+		<a href="{{ url_for('buy') }}">view your bill</a>
+	</body>
+</html>

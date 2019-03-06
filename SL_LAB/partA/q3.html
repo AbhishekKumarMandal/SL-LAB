@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+enter your sentence: <input type="text" id="word"><br><br>
+<input type="button" onclick="myfun()" value="submit"><br><br>
+<label id="res"></label>
+<script>
+	window.onload=function(){document.getElementById('word').value='';};
+	function myfun()
+	{
+		var str=document.getElementById("word").value;
+		//alert(str);
+		if( str== "")
+			document.getElementById("res").innerHTML="please fill the field.";
+		else if(!isNaN(str))
+			document.getElementById("res").innerHTML="please enter text.";
+		else
+		{
+			var s=str.split(' ');
+			var m=0;
+			var q="";
+			for(var i=0;i<s.length;i++)
+			{
+				if(m<s[i].length)
+				{
+					m=s[i].length;
+					q=s[i];
+				}
+			}
+			document.getElementById("res").innerHTML=("largest word length: "+q+" of length: "+m);
+		}
+	}
+
+</script> 
+</body>
+</html>
